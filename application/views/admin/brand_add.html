@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SHOP Management Center - Brand Management </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="application/views/admin/styles/general.css" rel="stylesheet" type="text/css" />
+<link href="application/views/admin/styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="index.php?p=admin&c=brand&a=index">Goods Brand</a></span>
+<span class="action-span1"><a href="index.php?act=main">SHOP Management Center</a> </span><span id="search_id" class="action-span1"> - Add Brand </span>
+<div style="clear:both"></div>
+</h1>
+
+<div class="main-div">
+<form method="post" action="index.php?p=admin&c=brand&a=insert" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+<table cellspacing="1" cellpadding="3" width="100%">
+  <tbody><tr>
+    <td class="label">NAME</td>
+    <td><input type="text" name="brand_name" maxlength="60" value=""><span class="require-field">*</span></td>
+  </tr>
+  <tr>
+    <td class="label">WEBSITE</td>
+    <td><input type="text" name="url" maxlength="60" size="40" value=""></td>
+  </tr>
+  <tr>
+    <td class="label"><a href="javascript:showNotice('warn_brandlogo');" title="click for a tip">
+        <img src="application/views/admin/images/notice.gif" width="16" height="16" border="0" alt="click for a tip"></a>LOGO</td>
+    <td><input type="file" name="logo" id="logo" size="45">    <br><span class="notice-span" style="display:block" id="warn_brandlogo">
+        upload image as LOGO！        </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="label">DESCRIPTION</td>
+    <td><textarea name="brand_desc" cols="60" rows="4"></textarea></td>
+  </tr>
+  <tr>
+    <td class="label">SORT</td>
+    <td><input type="text" name="sort_order" maxlength="40" size="15" value="50"></td>
+  </tr>
+  <tr>
+    <td class="label">SHOW OR NOT</td>
+    <td><input type="radio" name="is_show" value="1" checked="checked"> YES        <input type="radio" name="is_show" value="0"> NO        
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><br>
+      <input type="submit" class="button" value=" SUBMIT ">
+      <input type="reset" class="button" value=" RESET ">
+ 
+    </td>
+  </tr>
+</tbody></table>
+</form>
+</div>
+
+
+<div id="footer">
+	copyright &copy; 2012-2017 su - PHP - </div>
+</div>
+
+</body>
+</html>
